@@ -2,6 +2,7 @@ import React from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
 import { TimelineHistory, FlowchartExperimental, FlowchartModel } from './PhysicsDiagrams';
+import TikzViewer from './TikzViewer';
 
 // Hàm helper để render chữ thường xen kẽ inline LaTeX và bold text
 export function renderTextWithMath(text) {
@@ -146,7 +147,24 @@ export default function Latex({ content }) {
       return;
     }
 
-    // 3. Tiêu đề (### hoặc ## hoặc #)
+    // Nhận diện thẻ [TIKZ: ...]
+    const tikzMatch = trimmed.match(/^\[TIKZ: ([\s\S]+?)\]$/);
+    if (tikzMatch) {
+      pushCurrentList();
+      renderedElements.push(<TikzViewer key={index} code={tikzMatch[1]} />);
+      return;
+    }
+
+    // 3. Tiêu đề (#### hoặc ### hoặc ## hoặc #)
+    if (trimmed.startsWith('#### ')) {
+      pushCurrentList();
+      renderedElements.push(
+        <h4 key={index} className="theory-h4">
+          {renderTextWithMath(trimmed.substring(5))}
+        </h4>
+      );
+      return;
+    }
     if (trimmed.startsWith('### ')) {
       pushCurrentList();
       renderedElements.push(

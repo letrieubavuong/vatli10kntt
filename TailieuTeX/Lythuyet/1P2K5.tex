@@ -1,0 +1,93 @@
+%mac
+\subsubsection{GIA TỐC}
+%\paragraph{Gia tốc} 
+\Binhluan{Gia tốc là đại lượng vật lí đặc trưng cho sự biến đổi nhanh hay chậm của vận tốc.
+\begin{align*}
+\boder{\vec a=\dfrac{\Delta \vec v}{\Delta t}} 
+\end{align*}
+%\paragraph{Vector gia tốc} 
+%\begin{align*}
+%\boder{\vec{a}=\dfrac{\vec{v}-\vec{v}_0}{t-t_0}=\dfrac{\Delta \vec{v}}{\Delta t}}
+%\end{align*}
+%\begin{itemize}
+%	\item[$\bullet$] Gốc tại vật chuyển động.
+%	\item[$\bullet$] Phương không đổi theo phương quỹ đạo.
+%	\item[$\bullet$] Chiều không đổi.
+%\end{itemize}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline 
+$a.v > 0$ & $a.v < 0$ \\ 
+\hline 
+$\vec{a} \uparrow \uparrow \vec{v}$ & $\vec{a} \uparrow \downarrow \vec{v}$ \\ 
+\hline 
+vật chuyển động nhanh dần& vật chuyển động chậm dần\\ 
+\hline 
+\end{tabular} 
+\end{center}}{$a=\dfrac{\Delta v}{\Delta t}$ được gọi là gia tốc trung bình.\\
+Đơn vị của gia tốc là $m/s^2$}
+\subsubsection{CHUYỂN ĐỘNG THẲNG BIẾN ĐỔI ĐỀU}
+\newghichu{Độ lớn của vận tốc tức thời hoặc tăng đều hoặc giảm đều theo thời gian.\\
+Gia tốc không đổi theo thời gian}
+\begin{itemize}
+\item Nếu tốc độ tức thời tăng đều thì đó là chuyển động nhanh dần đều. 
+\item Nếu tốc độ tức thời giảm đều thì đó là chuyển động chậm dần đều.
+\end{itemize}
+\Binhluan{\Check \textbf{Công thức}
+\begin{align*}\boder{v=v_0+at};\quad\boder{d=v_0t+\dfrac{1}{2}at^2}\end{align*}
+\begin{align*}
+\boder{v^2-v_0^2=2ad}
+\end{align*}}{Khi sử dụng các công thức trên ta quy ước chọn chiều dương sao cho $v>0$. Khi đó: \\
+$\bullet$ Nhanh dần đều: $a>0$\\
+$\bullet$ Chậm dần đều: $a<0$}
+\Note{Nếu ta chọn chiều dương tuỳ ý thì biểu diễn các $\vec v,\ \vec a$ và xét dấu chúng.
+\begin{itemize}
+\item Chuyển động thẳng nhanh dần đều: $a.v>0$.
+\item Chuyển động thẳng chậm dần đều: $a.v<0$. 
+\end{itemize}
+}
+\subsubsection{ĐỒ THỊ VẬN TỐC - THỜI GIAN CỦA CHUYỂN ĐỘNG THẲNG BIẾN ĐỔI ĐỀU}
+\begin{itemize}
+\item Vì $v=at+v_0\Leftrightarrow y=ax+b$ nên đồ thị có dạng đường thẳng.
+\item Điểm xuất phát của đồ thị có hệ số góc là $a=\tan\alpha$. 
+\begin{itemize}
+\item Đồ thị đi lên nếu $a > 0$.
+\item Đồ thị đi xuống nếu $a < 0$.
+\end{itemize}
+\centerline{\begin{tikzpicture}[scale=1,thick,>=stealth',draw=Mapcolor]
+\tkzDefPoints{0/0/o, 0/3.5/x, 5/0/t, 0/0.5/x0}
+\tkzDrawSegments[->,blue](o,x o,t)
+\foreach  \x  in  {1.5,3,4.5}
+\foreach  \y  in  {1,1.5,...,3}
+{\draw[dotted,thin]  (\x,0)  --  (\x,3);
+\draw[dotted,thin]  (0,\y)  --  (4.5,\y);}
+\draw [Mapcolor, line width = 1.2pt](x0)--(4.5,3)coordinate(x1);
+\draw [green!70!black, line width = 1.2pt,dashed](x0)--(4.5,0.5)coordinate(x2);
+\tkzLabelPoint[right](x){$v$}
+\tkzLabelPoint[above](t){$t$}
+\tkzLabelPoint[left](x0){$v_0$}
+\tkzLabelPoint[left](o){$O$}
+\tkzDrawPoints[size=3,fill=white](o,x0)
+\node at (2.25,-0.5){$a>0$};
+\tkzMarkAngles[size=0.7cm](x2,x0,x1)
+\tkzLabelAngles[pos=1](x2,x0,x1){$\alpha$}
+\begin{scope}[shift={(7,0)}]
+\tkzDefPoints{0/0/o, 0/3.5/x, 5/0/t, 0/2.5/x0}
+\tkzDrawSegments[->,blue](o,x o,t)
+\foreach  \x  in  {1.5,3,4.5}
+\foreach  \y  in  {1,1.5,2,3}
+{\draw[dotted,thin]  (\x,0)  --  (\x,3);
+\draw[dotted,thin]  (0,\y)  --  (4.5,\y);}
+\draw [Mapcolor, line width = 1.2pt](x0)--(4.5,0)coordinate(x1);
+\draw [green!70!black, line width = 1.2pt,dashed](x0)--(4.5,2.5)coordinate(x2);
+\tkzLabelPoint[right](x){$v$}
+\tkzLabelPoint[above](t){$t$}
+\tkzLabelPoint[left](x0){$v_0$}
+\tkzLabelPoint[left](o){$O$}
+\tkzDrawPoints[size=3,fill=white](o,x0)
+\node at (2.25,-0.5){$a<0$};
+\tkzMarkAngles[size=0.7cm](x1,x0,x2)
+\tkzLabelAngles[pos=1](x1,x0,x2){$\alpha$}
+\end{scope}
+\end{tikzpicture}}
+\end{itemize}

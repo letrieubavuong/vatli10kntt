@@ -1,0 +1,149 @@
+%mac
+\subsubsection{CHUYỂN ĐỘNG CƠ - CHẤT ĐIỂM}
+\paragraph{Chuyển động cơ}
+\newghichu{Chuyển động cơ của một vật là sự thay đổi vị trí của vật đó so với các vật khác theo thời gian.}
+\paragraph{Chất điểm}
+\newghichu{
+Chất điểm là những vật có kích thước rất nhỏ so với độ dài đường đi hoặc so với khoảng cách đang xét.
+}
+\immini{\paragraph{Quỹ đạo}
+\newghichu{Quỹ đạo của chất điểm là tập hợp tất cả các vị trí của một chất điểm chuyển động tạo ra một đường nhất định.}}{\begin{tikzpicture}[draw=Mapcolor]
+\tkzDefPoints{0/0/o, 3/1/m, -0.5/-0.5/p, 4.5/1.5/q}
+\draw[very thick, Mapcolor,->] (0.7259,1.0037).. controls (0.9411,1.1591) and (1.252,1.2906).. (1.7422,1.3624)node[above,Mapcolor]{+};
+\draw[very thick, Mapcolor] (-0.5,-0.5).. controls (-0.3564,-0.2863) and (-0.2099,-0.1433).. (0,0).. controls (0.6817,0.4898) and (1.6422,0.7859).. (3,1).. controls (3.6587,1.1205) and (3.8801,1.1608).. (4.5,1.5);
+\tkzDrawPoints[size=4,fill=white](o,m)
+\tkzLabelPoint[below right](o){$O$}
+\tkzLabelPoint[below](m){$M$}
+\end{tikzpicture}}
+\subsubsection{CÁCH XÁC ĐỊNH VỊ TRÍ CỦA VẬT TRONG KHÔNG GIAN}
+\setcounter{paragraph}{0}
+\paragraph{Vật làm mốc}
+\newghichu{Vật làm mốc là vật được coi là đứng yên.}
+\immini{\paragraph{Hệ tọa độ}
+\newghichu{Hệ tọa độ gồm có gốc tọa độ và các trục tọa độ.} 
+\begin{itemize}
+\item Hai đường thẳng Ox và Oy vuông góc với nhau tạo thành một hệ trục tọa độ vuông góc (gọi tắt là hệ tọa độ). 
+\item Điểm O gọi là gốc tọa độ. 
+\end{itemize}}{\begin{tikzpicture}[scale=1,thick,>=stealth',draw=Mapcolor]
+\tkzDefPoints{0/0/o, 0/4/y, 3/0/x,  -3/0/x',1.5/3/a,  -1.5/3/b, 1.5/0/ax,  -1.5/0/bx, 0/3/by, 0/1.5/cy}
+\tkzDrawSegments[very thick,->,Mapcolor](x',x o,y)
+\tkzDrawSegments[dashed,Mapcolor](b,bx a,ax a,b)
+\tkzDrawPoints[size=3,fill=white](o,a,b,ax,bx,by,cy)
+\tkzLabelPoint[below](o){$O$}
+\tkzLabelPoint[below](x){$x\ (cm)$}
+\tkzLabelPoint[right](y){$y\ (cm)$}
+\tkzLabelPoint[below](bx){$-1$}
+\tkzLabelPoint[below](ax){$1$}
+\tkzLabelPoint[right](a){$A$}
+\tkzLabelPoint[left](b){$B$}
+\tkzLabelPoint[below left](by){$2$}
+\tkzLabelPoint[below left](cy){$1$}
+%\node at (0,-1){\textit{Tỉ xích 1 cm ứng với 10 m}};
+%\node at (0,-1.5){\textit{Hình 4.1. Hệ tọa độ}};
+\end{tikzpicture}}
+\paragraph{Hệ toạ độ địa lí}
+\immini{\begin{itemize}
+\item Trong thực tế, người ta thường chọn hệ toạ độ trùng với hệ toạ độ địa lí, có gốc là vị trí của vật mốc, trục hoành là đường nối hai hướng địa lí Tây - Đông, trục tung là đường nối hai hướng địa lí Bắc - Nam.
+\item Ví dụ, nếu $OA=2\ cm$ và tỉ lệ là $\dfrac{1}{1000}$ thì vị trí của điểm A cách điểm gốc 20 m theo hướng $45^\circ$ Đông - Bắc: A ($d=20\ m;\ 45^\circ$ Đông - Bắc).
+\end{itemize}}
+{\begin{tikzpicture}[scale=1,thick,>=stealth',draw=Mapcolor]
+\tkzDefPoints{0/0/o, 2/0/d, -2/0/t, 0/2/b, 0/-2/n}
+\tkzDefShiftPoint[o](45:2cm){a}
+\tkzDrawSegments[very thick,->,Mapcolor](o,d o,t o,n o,b)
+\tkzDrawSegments[very thick,Mapcolor](o,a)
+\tkzDrawPoints[size=3,fill=white](o,a)
+\tkzMarkAngles[size=0.4cm](d,o,a)
+\tkzLabelAngles[pos=0.8](d,o,a){$45^\circ$}
+\tkzLabelPoint[above](a){$A$}
+\tkzLabelPoint[below](d){Đông}
+\tkzLabelPoint[below](t){Tây}
+\tkzLabelPoint[below](n){Nam}
+\tkzLabelPoint[above](b){Bắc}
+%	\node at (0,-2.8){\textit{Hình 4.2. Hệ tọa độ địa lí}};
+\end{tikzpicture}}
+
+\newghichu{Để xác định vị trí của một chất điểm, người ta chọn một vật mốc, gắn vào đó một hệ tọa độ, vị trí của chất điểm được xác định bằng tọa độ của nó trong hệ tọa độ này.
+}
+\subsubsection{CÁCH XÁC ĐỊNH THỜI GIAN TRONG CHUYỂN ĐỘNG}
+\setcounter{paragraph}{0}
+\paragraph{Mốc thời gian} 
+\newghichu{Mốc thời gian (gốc thời gian) là thời điểm mà ta bắt đầu đo thời gian.}
+\paragraph{Thời điểm} 
+\newghichu{Thời điểm là giá trị mà đồng hồ hiện đang chỉ đến theo một mốc cho trước mà ta xét.}
+\paragraph{Thời gian}
+\newghichu{Thời gian là khoảng thời gian trôi đi trong thực tế giữa hai thời điểm mà ta xét.}
+\immini{\subsubsection{ĐỘ DỊCH CHUYỂN}
+\newghichu{\textit{Độ dịch chuyển được biểu diễn bằng một mũi tên nối vị trí đầu và vị trí cuối của chuyển động,  có độ dài tỉ lệ với độ lớn của độ dịch chuyển. Kí hiệu là $\vec d$}}
+%\begin{note}
+%	\immini{			
+%	Độ dịch chuyển mô tả trên hình là:
+%		\begin{itemize}
+%			\item 	 $d_1 = 200\ m$ (Bắc)
+%			\item $d_2 = 200\ m$ (Đông Bắc)
+%			\item $d_3 = 300\ m$ (Đông)
+%			\item $d_4 = 100\ m$ (Tây)
+%		\end{itemize}
+%	}{\begin{tikzpicture}[scale=1,thick,>=stealth']
+%			\tkzDefPoints{0/0/o, 3/0/d, -1/0/t, 0/2/b, 0/-2/n}
+%			\tkzDefShiftPoint[o](45:2cm){a}
+%			\tkzDrawSegments[very thick,->](o,d o,t o,b)
+%			\tkzDrawSegments[very thick,red](o,a)
+%			\tkzDrawPoints[size=3,fill=white](o,a)
+%			\tkzMarkAngles[size=0.4cm](d,o,a)
+%			\tkzLabelAngles[pos=0.8](d,o,a){$45^\circ$}
+%			\tkzLabelPoint[above](a){$d_2$}
+%			\tkzLabelPoint[below](d){$d_3$}
+%			\tkzLabelPoint[below](t){$d_4$}
+%			\tkzLabelPoint[above](b){$d_1$}
+%			\foreach  \x  in  {0,1,2}
+%			{\draw[very thick]  (\x,-0.1)  --  (\x,0.1);}
+%			\draw[very thick]  (-0.1,1)  --  (0.1,1);
+%			\tkzDefShiftPoint[o](45:1cm){b}
+%			\draw[very thick]  (b) ++(135:0.1)--++(-45:0.2);
+%			\node at (1,-1){Tỉ xích 1 cm ứng với 100 m};
+%			
+%			\begin{scope}[shift={(3,2.5)},rotate=45,scale=0.8]
+%				\tkzDefPoints{0/0/o, 1/0/d, -1/0/t, 0/1/b, 0/-1/n}
+%				\tkzDefShiftPoint[o](45:0.2cm){db}
+%				\tkzDefShiftPoint[o](135:0.2cm){tb}
+%				\tkzDefShiftPoint[o](225:0.2cm){tn}
+%				\tkzDefShiftPoint[o](315:0.2cm){dn}
+%				\fill[red](o)--(d)--(db)--cycle;
+%				\fill[red](o)--(b)--(tb)--cycle;
+%				\fill[red](o)--(t)--(tn)--cycle;
+%				\fill[red](o)--(n)--(dn)--cycle;
+%				\fill[black](o)--(d)--(dn)--cycle;
+%				\fill[black](o)--(b)--(db)--cycle;
+%				\fill[black](o)--(t)--(tb)--cycle;
+%				\fill[black](o)--(n)--(tn)--cycle;
+%			\end{scope}
+%			\begin{scope}[shift={(3,2.5)},rotate=0]
+%				\tkzDefPoints{0/0/o, 1/0/d, -1/0/t, 0/1/b, 0/-1/n}
+%				\tkzDefShiftPoint[o](45:0.2cm){db}
+%				\tkzDefShiftPoint[o](135:0.2cm){tb}
+%				\tkzDefShiftPoint[o](225:0.2cm){tn}
+%				\tkzDefShiftPoint[o](315:0.2cm){dn}
+%				\fill[red](o)--(d)--(db)--cycle;
+%				\fill[red](o)--(b)--(tb)--cycle;
+%				\fill[red](o)--(t)--(tn)--cycle;
+%				\fill[red](o)--(n)--(dn)--cycle;
+%				\fill[black](o)--(d)--(dn)--cycle;
+%				\fill[black](o)--(b)--(db)--cycle;
+%				\fill[black](o)--(t)--(tb)--cycle;
+%				\fill[black](o)--(n)--(tn)--cycle;
+%				\tkzLabelPoint[right](d){Đ}
+%				\tkzLabelPoint[left](t){T}
+%				\tkzLabelPoint[below](n){N}
+%				\tkzLabelPoint[above](b){B}
+%			\end{scope}
+%	\end{tikzpicture}}
+%\end{note}
+
+\subsubsection{PHÂN BIỆT QUÃNG ĐƯỜNG ĐI ĐƯỢC VÀ ĐỘ DỊCH CHUYỂN}
+\begin{itemize}
+\item Khi vật chuyển động thẳng, không đổi chiều thì độ lớn của độ dịch chuyển và quãng đường đi được bằng nhau.
+\item Khi vật chuyển động thẳng, có đổi chiều thì quãng đường đi được và độ dịch chuyển có độ lớn không bằng nhau.
+\end{itemize}}{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=8cm]{images/Bai4Chuong1}};
+\end{tikzpicture}
+}

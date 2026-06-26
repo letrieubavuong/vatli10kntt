@@ -1,0 +1,57 @@
+%mac
+\immini{\paragraph{Moment lực}
+\newghichu{
+\textbf{Moment của lực F} đối với trục quay là đại lượng đặc trưng cho tác dụng làm quay của lực quanh trục ấy và được đo bằng tích độ lớn của lực với cánh tay đòn.
+\begin{align*}
+\boder{M=F.d}
+\end{align*}
+}
+\begin{itemize}
+\item d là cánh tay đòn (còn gọi là tay đòn) là khoảng cách từ trục quay đến giá của lực, đơn vị là mét m.
+\item F là lực, đơn vị là N.
+\item M là mômen của lực F, đơn vị là N.m
+\end{itemize}}{\begin{tikzpicture}[scale=1,thick,>=stealth']
+\tkzDefPoints{0/0/o}
+\draw[line width=4pt](o)--++(-90:4.2);
+\foreach  \x  in  {2.1,1.8,...,0}
+{\draw[color=green!30!black,fill=cyan!30,line width=2pt] (o) circle(\x cm);}
+\draw[color=green!30!black,fill=black] (o) circle(0.03cm);
+\tkzDefShiftPoint[o](60:0.6cm){a}
+\tkzDefShiftPoint[a](-30:3cm){b}
+\tkzDrawSegments[color=green!30!black,line width=2pt](a,b)
+\tkzDefShiftPoint[b](-120:0.3cm){c}
+\tkzDefShiftPoint[c](0:0.3cm){d}
+\draw[line width=4pt](d)--++(0:0.5);
+\draw[line width=12pt](d)++(0:0.4)--++(0:0.5);
+\draw[line width=8pt](d)++(0:0.4)++(0:0.25)--++(90:2);
+\draw[line width=8pt](d)++(0:0.4)++(0:0.25)--++(-90:3);
+\draw[line width=3pt](d)++(0:0.4)++(0:0.25)++(-90:3)++(0:0.5)--++(180:7);
+\draw[color=green!30!black,fill=cyan!30,line width=2pt] (c) circle(0.3cm);
+\draw[color=green!30!black,fill=black] (c) circle(0.03cm);
+\tkzDefShiftPoint[d](-90:1.5cm){e}
+\tkzDrawSegments[color=green!30!black,line width=2pt](d,e)
+\node [draw,very thick, shape=rectangle, minimum width=0.5cm, minimum height=0.2cm, anchor=center,fill=orange] at (e) {};
+\tkzDefShiftPoint[e](90:0.4cm){f}
+\node [draw,very thick, shape=rectangle, minimum width=0.5cm, minimum height=0.2cm, anchor=center,fill=orange] at (f) {};
+\tkzDefShiftPoint[f](90:0.4cm){g}
+\node [draw,very thick, shape=rectangle, minimum width=0.5cm, minimum height=0.2cm, anchor=center,fill=orange] at (g) {};
+\tkzDefShiftPoint[o](180:1.8cm){h}
+\tkzDefShiftPoint[h](-90:0.9cm){i}
+\tkzDefShiftPoint[i](-90:2.2cm){k}
+\tkzDrawSegments[dashed,color=green!30!black,line width=2pt](h,i)
+\tkzDrawSegments[color=green!30!black,line width=2pt](i,k)
+\node [draw,very thick, shape=rectangle, minimum width=0.5cm, minimum height=0.2cm, anchor=center,fill=orange] at (k) {};
+\draw[red,->,line width=2pt](a)--++(-30:2.4)node[above right,black]{$\vec{F}_1$};
+\draw[red,->,line width=2pt](i)--++(-90:0.8)node[left,black]{$\vec{F}_2$};
+\draw[dashed,line width=1pt](o)--node[midway,above left]{$d_1$}(a);
+\draw[dashed,line width=1pt](o)--node[midway,above,xshift=-2pt]{$d_2$}(h);
+\end{tikzpicture}}
+\immini{\paragraph{Quy tắc moment lực}
+\newghichu{Để vật rắn có trục quay cố định \textbf{cân bằng} thì tổng moment của các lực làm cho vật quay theo một chiều phải bằng tổng moment của các lực làm cho vật quay theo chiều ngược lại}
+
+\Note{Chọn một chiều quay là chiều dương thì điều kiện cân bằng của vật có trục quay cố định là: \textit{Tổng các moment lực tác dụng lên vật (đối với một điểm bất kì) bằng 0}
+\begin{align*}
+\sum M=0
+\end{align*}
+}
+}{\includegraphics[width=4cm]{"images/21-8"}}

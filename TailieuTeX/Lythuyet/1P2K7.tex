@@ -1,0 +1,134 @@
+%mac
+%\vspace*{-3 cm}	
+\immini{ 
+\subsubsection{CHUYỂN ĐỘNG CỦA VẬT NÉM THEO PHƯƠNG THẲNG ĐỨNG}
+\begin{itemize}
+\item Là chuyển động thẳng biến đổi đều có gia tốc $a =\pm g$.
+\item Đối với chuyển động ném lên thì chuyển động được chia thành hai quá trình: chuyển động lên là chuyển động thẳng chậm dần đều, chuyển động xuống là chuyển động thẳng nhanh dần đều.
+\begin{itemize}
+\item Độ cao cực đại của vật so với điểm ném: $h_{\max}$.
+\item Độ cao cực đại của vật so với mặt đất: $H_{\max}=h_{\max}+h_0$.
+\end{itemize}
+\item Giải bài toán tương tự chuyển động thẳng biến đổi đều với các công thức: 
+\begin{align*}
+%\boder{y=y_0+v_0t+\dfrac{1}{2}gt^2} 
+\boder{s=v_0t+\dfrac{1}{2}at^2}\ 
+\boder{v_t=v_0+at}\ \boder{v^2-v_0^2=2as}
+\end{align*}
+\end{itemize}}{
+\begin{tikzpicture}[scale=1,thick,>=stealth']
+\node at (0,0){\includegraphics[width=4cm]{images/NemThangDung}};
+\fill[pattern=north east lines] (-1.2,-2.75)rectangle(1.1,-2.85);
+\draw(-1.2,-2.75)--(1.1,-2.75);
+\draw[dashed,thin](-1.2,2.37)--(1.1,2.37)(-1.2,0.2)--(-0.1,0.2);
+%\draw[-,blue](0.37,-2.75)node[below,black]{$O$}--++(90:6)node[left,black]{$y$};
+\draw[<->,dashed,thin](1,-2.75)--node[midway,fill=white]{$H_{max}$}(1,2.35);
+\draw[<->,dashed,thin](-1.1,0.2)--node[midway,fill=white]{$h_{max}$}(-1.1,2.35);
+\draw[<->,dashed,thin](-1.1,-2.75)--node[midway,fill=white]{$h_0$}(-1.1,0.2);
+\draw[->,blue](0.28,0.3)--++(90:0.6)node[left,black]{$\vec{v}_0$};
+\draw[->,red](0.28,0.1)--++(-90:1.1)node[left,black]{$\vec{g}$};
+\end{tikzpicture}}
+
+
+
+\immini{
+\subsubsection{CHUYỂN ĐỘNG CỦA VẬT NÉM NGANG}
+\begin{note}
+Chuyển động ném ngang là chuyển động có thể phân tích thành hai chuyển động thành phần vuông góc với nhau: chuyển động rơi tự do theo phương thẳng đứng và chuyển động thẳng đều theo phương nằm ngang.
+\end{note}
+\setcounter{paragraph}{0}
+\paragraph{Thành phần chuyển động theo phương thẳng đứng}
+\begin{itemize}
+\item Là chuyển động rơi tự do: $d_y=\dfrac{gt^2}{2};\ v_y=gt$.
+\item h là độ cao của vật khi bị ném ngang thì thời gian rơi:
+\begin{align*}
+\boder{h=\dfrac{1}{2}gt^2\Rightarrow t=\sqrt{\dfrac{2h}{g}}}
+\end{align*}
+\end{itemize}
+}
+{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=4cm]{images/12-1}};
+\end{tikzpicture}}
+\immini{
+\paragraph{Thành phần chuyển động theo phương nằm ngang}
+\begin{itemize}
+\item Là chuyển động thẳng đều: $d_x=v_0t;\ v_x=v_0$. 
+\item Tầm xa L của chuyển động ném ngang:
+\begin{align*}
+\boder{L=v_0 t=v_0\sqrt{\dfrac{2h}{g}}}\quad  \ct{với}\  t\ \ct{là thời gian rơi của vật}.
+\end{align*}
+\end{itemize}}{
+\begin{tikzpicture}[line cap=round, line join=round, scale=.75, font=\footnotesize, >=stealth,draw=Mapcolor]
+\path
+(0,0)coordinate(O)
+(6.5,0)coordinate(x)
+(0,-5.5)coordinate(y)
+;
+\draw [->](O)--(x);
+\draw [->](O)--(y);
+
+\node at (0,-6) {$y$};
+\node at (7,0) {$x$};
+\node[above left] at (0,0) {$O$};
+
+
+\draw [dashed](0,-2.5) -- (3.5,-2.5) -- (3.5,0);
+\draw[very thick,Mapcolor] (0,0) .. controls (2.5,-1) and (5.1,-4) .. (6,-5.5);
+\draw[very thick,->] (3.5,-2.5) -- (4.5,-2.5);
+\draw[very thick,->]  (3.5,-2.5) -- (3.5,-3.5);
+\draw[very thick,->]  (3.5,-2.5) -- (4.5,-3.5);
+\draw[dashed] (3.5,-3.5) -- (4.5,-3.5) -- (4.5,-2.5);
+\draw[very thick,->,red]  (0,0) -- (1,0);
+\node at (1,0.4) {$\vec v_0$};
+\node at (4.8,-2.4) {$\vec v_x$};
+\node at (3.4,-4) {$\vec v_y$};
+\node at (4.8,-3.4) {$\vec v_M$};
+\node at (3.6,0.4) {$d_x$};
+\node at (-0.4,-2.4) {$d_y$};
+\end{tikzpicture}}
+\immini{Quan sát ảnh hoạt nghiệm để thấy rằng chuyển động thành phần theo phương nằm ngang là chuyển động thẳng đều.
+\begin{itemize}
+\item Thông qua quan sát, ta thấy tọa độ tính theo phương ngang của hai viên bi A và viên bi B đều không thay đổi, và đều trong cùng một khoảng thời gian.
+\item Mặt khác, ta có $v=\dfrac{s}{t}=\dfrac{x}{t}$ (do vật không đổi chiều chuyển động). Tọa độ x không đổi, thời gian như nhau, nên vận tốc không thay đổi $\Rightarrow v_x=v_0$.
+\end{itemize}
+}
+{	\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=4cm]{images/12-2}};
+\end{tikzpicture}}
+\paragraph{Vận tốc của vật} 
+\begin{align*}
+\boder{v=\sqrt{v_x^2+v_y^2}=\sqrt{v_0^2+\left(gt\right)^2}}
+\end{align*}
+\paragraph{Phương trình quỹ đạo}
+\begin{align*}\boder{y=\dfrac{g}{2v_0^2}x^2}\quad \Rightarrow \text{Quỹ đạo có dạng một nửa parabol}\end{align*}
+\subsubsection{CHUYỂN ĐỘNG CỦA VẬT BỊ NÉM THEO PHƯƠNG XIÊN}
+Khi đánh một quả bóng tennis lên cao theo phương xiên góc với phương nằm ngang, người ta thấy quả bóng bay lên rồi rơi xuống theo một quỹ đạo có dạng hình parabol. Chuyển động của quả bóng trong trường hợp này gọi là chuyển động của vật bị ném xiên, gọi tắt là chuyển động ném xiên.
+\begin{center}
+\begin{tikzpicture}[scale=1,thick,>=stealth',draw=Mapcolor]
+\tkzDefPoints{-4.5/0.5/o}
+\tkzDefShiftPoint[o](45:2cm){m}
+\tkzDefShiftPoint[o](0:2cm){n}
+\tkzMarkAngles[size=0.4cm](n,o,m)
+\tkzLabelAngles[pos=0.7](n,o,m){$\alpha$}
+\node[] (russell) at (-4.7,-0.4){\includegraphics[width=1cm]{images/CauLong}};
+\draw[red,very thick,->](-4.5,0.5)--++(45:1.2);
+\draw[Mapcolor,dashed](-4.5,0.5)node[above left,black]{}--(-3,0.5)node[above right,black]{};
+%\draw[red,very thick,<->](0.5,0.5)--node[midway,right,black]{$4\ m$}(0.5,3.5)node[above,black]{};
+%\draw[red,very thick,<->](0.5,-1)--node[midway,right,black]{$2\ m$}(0.5,0.5);
+\draw[very thick, Mapcolor, smooth, domain=-3.6:6.8,dashed]
+plot(\x,{(-0.12)*(\x)^2+0.15*(\x)+3.5})node[above right,black]{};
+\draw[](-4.5,-1)--++(0:11.3);
+%\node at (0.5,-1.4){Hình II.4};
+\end{tikzpicture}
+\end{center}
+
+\begin{itemize}
+\item Công thức xác định tầm cao và tầm xa của chuyển động ném xiên.
+\begin{align*}
+\ct{Tầm cao:}\  \boder{H=\dfrac{v_0^2.\sin^2\alpha}{2.g}}\quad 
+\ct{Tầm xa ngang điểm ném:}\ \boder{L=\dfrac{v_0^2.\sin 2\alpha}{g}}
+\end{align*}
+\end{itemize}
+\Note{Các công thức trên chỉ đúng khi lực cản của không khí là không đáng kể}
+
+\newpage

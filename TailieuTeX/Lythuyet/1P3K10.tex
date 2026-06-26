@@ -1,0 +1,47 @@
+%mac
+\paragraph{Khái niệm ngẫu lực} 
+\textit{Hệ hai lực song song ngược chiều có độ lớn bằng nhau và cùng tác dụng vào một vật gọi là ngẫu lực}\\
+\begin{center}
+\begin{tikzpicture}[scale=1,thick,>=stealth']
+\tkzDefPoints{0./0/o}
+\node[inner sep=0pt] (russell) at (-6,0){\includegraphics[width=3cm]{images/weel.pdf}};
+\draw[very thick, red,->](-7.1,0)--++(-90:1.2)node[below,black]{$\vec{F}_1$};
+\draw[fill=white](-7.1,0)circle(1.2pt);
+\draw[very thick, red,->](-4.9,0)--++(90:1.2)node[above,black]{$\vec{F}_2$};
+\draw[fill=white](-4.9,0)circle(1.2pt);
+\draw[very thick,fill=white]  plot[smooth, tension=.7] coordinates {(-2.3,-0.1) (-2.3,0.4) (-2.2,0.8) (-2,1.1) (-1.6,1.2) (-1.2,1.3) (-0.6,1) (-0.3,0.4) (-0.3,-0.1) (-0.4,-0.6) (-0.6,-1.1) (-1.2,-1.3) (-1.8,-1.2) (-2.2,-0.7) (-2.3,-0.1)};
+\node (v) at (-1.3,-0.1) {};
+\node (v1) at (-1.3,0.7) {};
+\node (v2) at (-1.3,-0.9) {};
+\node (v3) at (-2,0.7) {};
+\node (v4) at (-0.8,0.7) {};
+\node (v5) at (-1.8,-0.9) {};
+\node (v6) at (-0.7,-0.9) {};
+\tkzDrawSegments(v1,v2)
+\tkzDrawSegments[dashed](v3,v4 v5,v6)
+\draw[very thick, red,->](v4)--++(0:1.2)node[below,black]{$\vec{F}_1$};
+\draw[very thick, red,->](v5)--++(180:1.2)node[above,black]{$\vec{F}_2$};
+\tkzDrawPoints[size=3,fill=white](v,v4,v5)
+\tkzLabelSegment[left](v,v1){$d_1$}
+\tkzLabelSegment[left](v,v2){$d_2$}
+\node[inner sep=0pt] (russell) at (4,0){\includegraphics[width=3cm]{images/watertap.pdf}};
+\draw[very thick, red,->](2.9,0.26)--++(140:1.2)node[above,black]{$\vec{F}_1$};
+\draw[fill=white](2.9,0.26)circle(1.2pt);
+\draw[very thick, red,->](3.75,0.7)--++(-40:1.2)node[below,black]{$\vec{F}_2$};
+\draw[fill=white](3.75,0.7)circle(1.2pt);
+\tkzLabelPoint[right](v){O}
+\end{tikzpicture}
+\end{center}
+\paragraph{Moment ngẫu lực}
+\boder{M=F.d}\ \ct{Trong đó:}
+$\begin{cases}
+\ct{M: momen của ngẫu lực (N.m)}.\\
+\ct{F: lực tác dụng (N)}.\\
+\ct{d: cánh tay đòn của ngẫu lực (m)}
+\end{cases}$
+\paragraph{Đặc điểm ngẫu lực}
+\begin{itemize}
+\item Momen của ngẫu lực \textbf{không} phụ thuộc vào vị trí của trục quay vuông góc với mặt phẳng chứa ngẫu lực.
+\item Đối với vật rắn không có trục quay cố định, ngẫu lực làm vật rắn quay quanh trục đi qua trọng tâm của vật rắn.
+\item \textit{Đối với vật rắn có trục quay cố định, nếu trục quay không trùng với trục đi qua trọng tâm của vật rắn, momen của ngẫu lực sẽ làm cho vật bị rung lắc vì vậy trong chế tạo máy người ta thường làm các động cơ quay tròn và có tâm đối xứng trùng với trục quay của vật rắn}
+\end{itemize}

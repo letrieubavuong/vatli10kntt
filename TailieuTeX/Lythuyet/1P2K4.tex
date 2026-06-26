@@ -1,0 +1,78 @@
+%mac
+\paragraph{Phương trình chuyển động của vật chuyển động thẳng đều}
+\begin{align*}		\boder{x=x_0+vt}\quad 
+\text{với}: \begin{cases} 
+x_0: \text{là toạ độ ban đầu của vật tại thời điểm $t_0$}. \\ 
+x: \text{là toạ độ của vật tại thời điểm t}. \\
+v: \text{là vận tốc của vật}. 
+\end{cases}
+\end{align*}
+\centerline{
+\begin{tikzpicture}[scale=1,thick,>=stealth',draw=Mapcolor]
+\tkzDefPoints{0/0/o, 1/0/a, 3/0/m, 6/0/x}
+\tkzDrawSegments[->,Mapcolor, very thick](o,x)
+\tkzDrawPoints[size=3,fill=white](o,a,m)
+\draw[<->,Mapcolor](0,-0.3)--node[midway,below,black]{$x_0$}(1,-0.3);
+\draw[<->,Mapcolor](0,-0.8)--node[midway,below,black]{$x$}(3,-0.8);
+\draw[<->,Mapcolor](1,-0.3)--node[midway,below,black]{$s$}(3,-0.3);
+\tkzLabelPoint[above](o){$O$}
+\tkzLabelPoint[above](a){$A$}
+\tkzLabelPoint[above](m){$M$}
+\tkzLabelPoint[above](x){$x$}
+\end{tikzpicture}
+}\begin{note}
+\begin{itemize}
+\item Để đơn giản ta chọn gốc thời gian lúc vật bắt đầu chuyển động. 
+\item Quãng đường vật đi được sau thời gian $t$ bằng độ dịch chuyển của vật: $d=s=|v|t$.
+\item Dấu của vận tốc phụ thuộc vào chiều dương mà ta chọn:
+\begin{itemize}
+\item Vật chuyển động cùng chiều dương: \ \ $v>0$.
+\item Vật chuyển động ngược chiều dương: $v<0$.
+\end{itemize}
+\end{itemize}
+\end{note}
+\paragraph{Đồ thị của chuyển động thẳng đều}
+\begin{itemize}
+\item Đồ thị độ dịch chuyển - thời gian (d--t) hoặc đồ thị tọa độ - thời gian (x--t) là đường thẳng có độ dốc (hệ số góc) là v
+\begin{itemize}
+\item $v>0$: đồ thị hướng chéo lên. 
+\item $v<0$: đồ thị hướng chéo xuống. 
+\item $\tan\alpha=\dfrac{x-x_0}{t}=v$.
+\end{itemize}
+\item Đồ thị vận tốc -- thời gian (v--t) là đường thẳng song song với trục thời gian 
+\end{itemize}
+\centerline{
+\begin{tikzpicture}[scale=.8,thick,>=stealth',draw=Mapcolor]
+\begin{scope}
+\coordinate (o) at (0,0);
+\draw[->,thick,Mapcolor](o)--++(0:4.5)node[right]{\normalsize{t}};
+\draw[->,thick,Mapcolor](o)--++(90:3.5)node[right]{\normalsize{x}};
+\draw[very thick,Mapcolor](0,1)node[left]{\normalsize{\bth{x_0}}}--node[midway,below right]{\normalsize{\bth{x=x_0+vt}}}++(25:4.5);
+\node[below] at (2.25,0) {\small{Chuyển động theo chiều dương}};
+\node[below] at (2.25,0.7) {\normalsize{\bth{v>0}}};
+\end{scope}
+\begin{scope}[xshift=7cm]
+\coordinate (o) at (0,0);
+\draw[->,thick,Mapcolor](o)--++(0:4.5)node[right]{\normalsize{t}};
+\draw[->,thick,Mapcolor](o)--++(90:3.5)node[right]{\normalsize{x}};
+\draw[very thick,Mapcolor](0,3)node[left]{\normalsize{\bth{x_0}}}--node[midway,below left]{\normalsize{\bth{x=x_0+vt}}}++(-25:4.5);
+\node[below] at (2.25,0) {\small{Chuyển động theo chiều âm}};
+\node[below] at (2.25,0.7) {\normalsize{\bth{v<0}}};
+\end{scope}
+\begin{scope}[xshift=14cm]
+\coordinate (o) at (0,0);
+\draw[->,thick,Mapcolor](o)--++(0:4.5)node[right]{\normalsize{t}};
+\draw[->,thick,Mapcolor](o)--++(90:3.5)node[right]{\normalsize{v}};
+\draw[very thick,Mapcolor](0,2)node[left]{\normalsize{\bth{v}}}--++(0:4);
+\fill[pattern=north east lines] (0.5,2) rectangle (4,0);
+\node[above,fill=white] at (2.25,1) {\normalsize{\bth{v>0}}};
+\node[below,fill=white] at (2.25,1) {\normalsize{\bth{S=vt}}};
+\node[below] at (0.5,0) {\normalsize{\bth{t_0}}};
+\node[below] at (4,0) {\normalsize{t}};
+\end{scope}
+\end{tikzpicture}}
+
+
+
+
+

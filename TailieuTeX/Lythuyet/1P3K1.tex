@@ -1,0 +1,185 @@
+%mac
+\subsubsection{LỰC VÀ BIỂU DIỄN LỰC TÁC DỤNG}
+\paragraph{Lực}
+\newghichu{\textit{Lực là đại lượng vectơ đặc trưng cho tác dụng của vật này lên vật khác, kết quả làm cho vật thay đổi vận tốc (tức là gây gia tốc cho vật) hoặc làm vật biến dạng}}
+\paragraph{Đặc trưng của lực}
+\begin{itemize}
+\item Các yếu tố của lực bao gồm điểm đặt, phương, chiều và độ lớn.
+\item Đường thẳng mang vectơ lực gọi là giá của lực.
+\end{itemize}
+\setcounter{paragraph}{0}
+\subsubsection{TỔNG HỢP LỰC}
+\paragraph{Định nghĩa tổng hợp lực}
+\immini{\begin{itemize}
+\item \textit{Tổng hợp lực} là phép thay thế các lực tác dụng đồng thời vào cùng một vật bằng một lực có tác dụng giống hệt như các lực ấy. Lực thay thế này gọi là \textit{hợp lực}.
+\item Về mặt toán học, ta có thể tìm hợp lực bằng phép cộng vectơ: 
+\begin{align*}
+\boder{\vec F=\vec F_1+\vec F_2 +\vec F_3+}
+\end{align*}
+\end{itemize}}{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=6cm]{images/tr56}};
+\end{tikzpicture}}
+\paragraph{Tổng hợp hai lực đồng quy - Quy tắc hình bình hành}
+\textbf{}
+\immini{\begin{itemize}
+\item \textbf{Bước 1:} Vẽ hai vectơ $\vec F_1$ và $\vec F_2$ đồng quy tại O.
+\item \textbf{Bước 2:} Vẽ một hình bình hành có hai cạnh liền kề trùng với hai vectơ $\vec F_1$ và $\vec F_2$.
+\item \textbf{Bước 3:} Vẽ đường chéo hình bình hành có cùng gốc O.
+\item \textbf{Bước 4:} Vectơ hợp lực $\vec F$ trùng với đường chéo này.
+\end{itemize}	}{	\begin{tikzpicture}[scale=1,thick,>=stealth',draw=Mapcolor]
+\coordinate (o) at (0,0);
+\draw[->,very thick,Mapcolor](o)--++(0:3.5)coordinate(f2)node[below]{\normalsize{\bth{\vec{F}_1}}};
+\draw[->,very thick,Mapcolor](o)--++(60:2)coordinate(f1)node[above]{\normalsize{\bth{\vec{F}_2}}};
+\draw[dashed,Mapcolor](f1)--++(0:3.5)coordinate(f) node[right]{\normalsize{\bth{\vec{F}}}};
+\draw[black,dashed] (f)--(f2);
+\draw[->,very thick,Mapcolor](o)--++(f);
+\end{tikzpicture}
+}
+\begin{align*}
+\boder{\vec F=\vec F_1+\vec F_2}
+\end{align*}
+Độ lớn hợp lực: \boder{F=\sqrt{F_1^2+F_2^2+2F_1F_2cos\alpha}} Với $\alpha$ là góc giữa hai lực $\vec F_1$ và $\vec F_2$.\\
+\textbf{Các trường hợp đặc biệt khi tổng hợp lực:}
+\begin{itemize}
+\item Hai lực cùng phương cùng chiều
+%	\centerline{\begin{tikzpicture}[scale=1,thick,>=stealth']
+%			\coordinate (o) at (0,0);
+%			\filldraw[black] (o) circle(1.2pt); 
+%			\draw[->,very thick,black](o)--++(0:2)node[above]{\normalsize{\bth{\vec{F}_1}}};
+%			\draw[->,very thick,black](o)--++(0:4)node[above]{\normalsize{\bth{\vec{F}_2}}};
+%	\end{tikzpicture}}
+\begin{align*}
+\boder{F=F_1+F_2}
+\end{align*}
+\item Hai lực cùng phương ngược chiều
+%	\centerline{ \begin{tikzpicture}[scale=1,thick,>=stealth']
+%			\coordinate (o) at (1,0);
+%			\filldraw[black] (1,0) circle(1.2pt); 
+%			\draw[->,very thick,black](o)--++(0:-2)node[above]{\normalsize{\bth{\vec{F}_1}}};
+%			\draw[->,very thick,black](o)--++(0:4)node[above]{\normalsize{\bth{\vec{F}_2}}};
+%	\end{tikzpicture}}
+\begin{align*}
+\boder{F=\abs{F_1-F_2}}
+\end{align*}
+\item Hai lực vuông góc
+%	\centerline{\begin{tikzpicture}[scale=1,thick,>=stealth']
+%			\coordinate (o) at (0,0);
+%			\draw[->,very thick,black](o)--++(0:4)node[above]{\normalsize{\bth{\vec{F}_1}}};
+%			\draw[->,very thick,black](o)--++(90:2)node[left]{\normalsize{\bth{\vec{F}_2}}};
+%			\draw[black] (0,0.2)--(0.2,0.2)--(0.2,0);
+%	\end{tikzpicture}}
+\begin{align*}
+\boder{F=\sqrt{F_1^2+F_2^2}}
+\end{align*}
+\end{itemize}
+\Note{Điều kiện để F là hợp lực của hai lực $F_1$, $F_2$: $ \left|{F}_{2}-{F}_{1}\right|\le F\le {F}_{1}+{F}_{2}$}
+\subsubsection{CÁC LỰC CÂN BẰNG VÀ KHÔNG CÂN BẰNG}
+\setcounter{paragraph}{0}
+\immini{\paragraph{Các lực cân bằng}
+Xét trường hợp vật đứng yên dưới tác dụng của nhiều lực. Khi đó tổng hợp các lực tác dụng lên vật bằng 0. Ta nói các lực tác dụng lên vật là \textit{các lực cân bằng} và vật ở trạng thái \textit{cân bằng}.
+\begin{center}
+\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=10cm]{images/13-4}};
+\end{tikzpicture}
+\end{center}
+\begin{align*}
+\vec F=\vec F_1+\vec F_2+\vec F_3+...=\vec 0
+\end{align*}}{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=5cm]{images/13-5}};
+\end{tikzpicture}
+}
+\immini{\paragraph{Các lực không cân bằng}
+Khi hợp lực của các lực khác không thì các lực này không cân bằng. Hợp lực hay lực không cân bằng này làm thay đổi vận tốc của vật}{\begin{tikzpicture}[scale=1,thick,>=stealth',draw=Mapcolor]
+\tkzInit[ymin=-1,ymax=1.5,xmin=-2.5,xmax=3.5]\tkzClip
+\tkzDefPoints{0/0.25/o}
+\node[] (russell) at (0,0.3){\includegraphics[width=3cm]{images/Car1}};
+%\node at (0,-0.5){Hình 13.6};
+\draw[very thick,Mapcolor,->](o)--++(0:3)node[above,black]{$\vec{F}_1$};
+\draw[very thick,Mapcolor,->](o)--++(180:2)node[above,black]{$\vec{F}_2$};
+\tkzDrawPoints[size=3,fill=white](o)
+\end{tikzpicture}}
+\begin{center}
+\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=15cm]{images/13-7}};
+\end{tikzpicture}
+\end{center}	
+\immini{\subsubsection{PHÂN TÍCH LỰC}
+\begin{itemize}
+\item \textit{Phân tích lực} là thay thế một lực bằng \textit{các lực thành phần} có tác dụng giống hệt lực đó.
+\item Ta thường phân tích một lực thành hai lực thành phần vuông góc với nhau vì hai lực thành phần vuông góc với nhau có tác dụng độc lập với nhau.
+\end{itemize}
+\Note{	Phân tích một lực thành hai lực chỉ thực hiện được theo hai phương đã biết}}{\begin{tikzpicture}[scale=1,thick,>=stealth',draw=Mapcolor]
+\tkzInit[ymin=-4,ymax=0.5,xmin=-0.5,xmax=5.5]\tkzClip
+\begin{scope}[shift={(0,0)},rotate=-30]
+\node  at  (2.3,0)  [shape=rectangle,draw=red,fill=green!70!black,minimum height=0.5cm,minimum width=0.6cm, rounded corners=1pt,rotate=-30]  {};
+\draw[very thick,Mapcolor,->](2.3,0)--++(0:0.7)node[above,black,xshift=10pt]{$\vec{P}_2$}coordinate(px);
+\draw[very thick,Mapcolor,->](2.3,0)--++(-90:1.2)node[left,black]{$\vec{P}_1$}coordinate(n);
+\draw[very thick,Mapcolor,->](2.3,0)--++(-60:1.4)node[right,black,yshift=5pt]{$\vec{P}$}coordinate(p);
+\draw[dashed,thin](px)--(p)--(n);
+\draw[fill=white](2.3,0)circle(1.2pt);
+\draw(0,-0.27)coordinate(a)--++(0:6)coordinate(b)--++(210:5)coordinate(c);
+\fill[pattern=north east lines](b)--(c)--++(300:0.1)--++(390:5);
+\end{scope}
+\end{tikzpicture}}
+%mac
+\subsubsection{TRỌNG LỰC}
+\paragraph{Lực hấp dẫn}
+\textit{Mọi vật trong vũ trụ đều hút nhau bởi một lực gọi là lực hấp dẫn}
+\immini{\paragraph{Trọng lực}
+\begin{itemize}
+\item Trọng lực là lực hấp dẫn do Trái Đất tác dụng lên vật. Trọng lực là một trường hợp riêng của lực hấp dẫn.
+\item Trọng lực được kí hiệu là vectơ $\vec P$, có:
+\begin{itemize}
+\item Phương thẳng đứng;
+\item Chiều hướng về tâm Trái Đất.
+\item Điểm đặt của trọng lực gọi là trọng tâm của vật.
+\item Độ lớn: $P=m.g$.
+\end{itemize}	
+\end{itemize}}{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=3cm]{images/17-1}};
+\end{tikzpicture}}	
+\immini{\paragraph{Trọng lượng}
+\begin{itemize}
+\item Khi vật đứng yên trên Trái Đất, trọng lượng của vật bằng độ lớn của trọng lực tác dụng lên vật:
+\begin{align*}
+P=m.g
+\end{align*}
+\item Ở gần mặt đất, gia tốc rơi tự do có giá trị gần đúng $g=9,8\ m/s^2$.
+\end{itemize}}{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=2.5cm]{images/17-2}};
+\end{tikzpicture}}
+\paragraph{Phân biệt trọng lượng và khối lượng}
+\begin{itemize}
+\item Trọng lượng của một vật thay đổi khi đem đến một nơi khác có gia tốc rơi tự do thay đổi.
+\item Khối lượng là số đo lượng chất của vật. Vì vậy, khối lượng của một vật không thay đổi khi ta chuyển nó từ nơi này đến nơi khác.
+\end{itemize}	
+\immini{\paragraph{Xác định trọng tâm của một vật phẳng, mỏng}
+\begin{itemize}
+\item Bằng thực nghiệm ta có thể xác định trọng tâm của một vật phẳng, mỏng có hình dạng bất kì.		 
+\item Trọng tâm của các vật phẳng, mỏng và có dạng hình học đối xứng nằm ở tâm đối xứng của vật. 
+\end{itemize}}{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=2cm]{images/17-3}};
+\end{tikzpicture}}	
+\subsubsection{LỰC CĂNG}
+\begin{itemize}
+\item Lực căng do sợi dây tác dụng vào vật, có phương trùng với phương của sợi dây, có chiều ngược với chiều của lực do vật kéo dãn dây (hay có chiều luôn hướng vào trong lòng sợi dây). 
+\end{itemize}
+\begin{center}
+\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=8cm]{images/17-4}};
+\end{tikzpicture}
+\end{center}	
+\begin{center}
+\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=12cm]{images/17-5}};
+\end{tikzpicture}
+\end{center}
+
+\immini{\begin{itemize}
+\item Mỗi sợi dây chỉ chịu được một lực căng giới hạn. Khi lực tác dụng lên dây vượt quá giá trị giới hạn này thì dây sẽ đứt.
+\item Nếu khối lượng của ròng rọc và của dây đều nhỏ so với khối gỗ (có thể bỏ qua) thì lực căng ở các điểm trên dây có độ lớn bằng nhau.
+\end{itemize}}	
+{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=6cm]{images/17-6}};
+\end{tikzpicture}}
+\newpage

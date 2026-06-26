@@ -1,0 +1,105 @@
+%mac
+\immini{Hình bên cho thấy một trong hai con tàu vũ trụ Voyager đang làm nhiệm vụ thăm dò các hành tinh nằm xa Trái Đất trong hệ Mặt Trời. Chúng được phóng lên từ Mũi Canaveral, Florida (Hoa Kì) vào năm 1977 và hiện nay cả hai con tàu đã ra khỏi hệ Mặt Trời, đang tiếp tục hoạt động và gửi thông tin về Trái Đất.\\
+Điều gì đã giúp cho tàu Voyager tiếp tục chuyển động rời xa Trái Đất, mặc dù thực tế không còn lực nào tác dụng lên chúng nữa?}{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=4cm]{images/voyager}};
+\end{tikzpicture}}
+\immini{\subsubsection{LỰC VÀ CHUYỂN ĐỘNG}
+\begin{itemize}
+\item Một quyển sách đang nằm yên trên mặt bàn. Ta phải đẩy nó thì nó mới dịch chuyển và khi ngừng đẩy thì nó dừng lại. Điều này dễ làm ta nhầm lẫn rằng phải có lực thì mới có chuyển động.
+\item Bố trí thí nghiệm như hình, rồi thả hòn bi cho lăn xuống theo máng nghiêng 1. Ta nhận thấy hòn bi lăn ngược lên máng 2 đến một độ cao thấp hơn độ cao ban đầu vì có ma sát.
+\item Khi hạ thấp độ nghiêng của máng 2, ta thấy hòn bi lăn trên máng 2 được một đoạn dài hơn.
+\item Nếu không có ma sát và nếu máng nghiêng 2 nằm ngang thì hòn bi sẽ lăn mãi mãi với vận tốc không đổi.
+\end{itemize}	
+}{\begin{tikzpicture}[line cap=round, line join=round, scale=1, font=\footnotesize, >=stealth,draw=Mapcolor]
+%[draw=Mapcolor]
+\draw (3.8,-5.7) -- (4.1,-5.7);
+
+\draw (3.9,-5.8) -- (4.1,-5.8);
+
+\draw (3.8,-5.9) -- (4.1,-5.9);
+\path
+(0,0)coordinate(O)
+(0.16,1.6)coordinate(A)
+(3.6,1.26)coordinate(B)
+;
+\draw (0,0) -- (5,0);
+
+\draw[line width =2pt] (0,1.5) -- (1.5,0) -- (4.5,1.5);
+\node at (-0.5,1.5) {$1$};
+\node at (5,1.5) {$2$};
+\draw[<->] (0,0.06) -- (0,1.42);
+\node at (-0.2,0.8) {$h$};
+\shade[ball color=Mapcolor!30] (A) circle (1ex);
+\shade[ball color=Mapcolor] (B) circle (1ex);
+
+\node at (2.4,-0.4) {a)};
+
+\begin{scope}[shift={(0,-3)},rotate=0]
+\path
+(0,0)coordinate(O)
+(0.16,1.6)coordinate(A)
+(3.95,1)coordinate(B)
+;
+\draw (0,0) -- (5,0);
+
+\draw[line width =2pt] (0,1.5) -- (1.5,0) -- (4.5,1);
+\node at (-0.5,1.5) {$1$};
+\node at (5,1.5) {$2$};
+\draw[<->] (0,0.06) -- (0,1.42);
+\node at (-0.2,0.8) {$h$};
+\shade[ball color=Mapcolor!30] (A) circle (1ex);
+\shade[ball color=Mapcolor] (B) circle (1ex);
+
+\node at (2.4,-0.4) {b)};
+\end{scope}
+
+
+\begin{scope}[shift={(0,-6)},rotate=0]
+\path
+(0,0)coordinate(O)
+(0.16,1.6)coordinate(A)
+(4.13,0.19)coordinate(B)
+;
+\draw (0,0) -- (5,0);
+
+\draw[line width =2pt] (0,1.5) -- (1.5,0) -- (4.5,0);
+\node at (-0.5,1.5) {$1$};
+\node at (5,1.5) {$2$};
+\draw[<->] (0,0.06) -- (0,1.42);
+\node at (-0.2,0.8) {$h$};
+\shade[ball color=Mapcolor!30] (A) circle (1ex);
+\shade[ball color=Mapcolor] (B) circle (1ex);
+
+\node at (2.4,-0.4) {c)};
+\end{scope}
+
+
+\end{tikzpicture}}
+\begin{itemize}
+\item Vậy lực không hoàn toàn là nguyên nhân gây ra mọi chuyển động, vật vẫn có thể chuyển động mà không cần lực tác dụng lên nó. Lực là nguyên nhân thay đổi chuyển động.
+\end{itemize}	
+\immini{\subsubsection{ĐỊNH LUẬT 1 NEWTON}
+\textit{Nếu một vật không chịu tác dụng của lực nào hoặc chịu tác dụng của các lực có hợp lực bằng không, thì vật đang đứng yên sẽ tiếp tục đứng yên, đang chuyển động sẽ  tiếp tục chuyển động thẳng đều.
+\setcounter{paragraph}{0}
+\paragraph{Quán tính}
+Tính chất bảo toàn trạng thái đứng yên hay chuyển động của vật, gọi là quán tính của vật.
+\begin{itemize}
+\item Do có quán tính mà mọi vật có xu hướng bảo toàn vận tốc cả về hướng và độ lớn.
+\item Định luật 1 Newton còn được gọi là định luật quán tính.
+\end{itemize}}}{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=4cm]{images/14-2}};
+\end{tikzpicture}}	
+\paragraph{Ứng dụng của quán tính trong đời sống}
+\immini{\begin{itemize}
+\item Khi ngồi trên ô tô, tàu lượn cao tốc hoặc máy bay, hành khách luôn được nhắc thắt dây an toàn.
+\item Để tra đầu búa vào cán, nên chọn cách đập mạnh cán búa xuống đất như hình a) chứ không đập mạnh đầu búa xuống đất như hình b).
+\end{itemize}}{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=4cm]{images/14-4}};
+\end{tikzpicture}}	
+\immini{\begin{itemize}
+\item Khi dùng tay búng mạnh tấm bìa, vành khuyên thì cục tẩy và nắp nút sẽ rơi xuống cốc. 
+\item Rất nhiều vụ tai nạn giao thông có nguyên nhân từ quán tính. 
+\end{itemize}}{\begin{tikzpicture}
+\node[] at (0,0){\includegraphics[width=6cm]{images/14-5}};
+\end{tikzpicture}}	
+

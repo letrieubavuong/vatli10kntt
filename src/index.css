@@ -492,6 +492,13 @@ button, input {
   margin-top: 1rem;
 }
 
+.theory-h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-top: 0.75rem;
+}
+
 .theory-p {
   margin-bottom: 0.5rem;
 }
@@ -2396,6 +2403,150 @@ button, input {
 .loop-back-indicator span {
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+/* --- 9. TikzViewer Styles --- */
+.tikz-viewer-card {
+  margin: 1.5rem 0;
+  border: 1px solid var(--border-color);
+  background: rgba(21, 29, 48, 0.4);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.tikz-viewer-card:hover {
+  border-color: rgba(56, 189, 248, 0.25);
+  box-shadow: 0 8px 30px -10px rgba(56, 189, 248, 0.1);
+}
+
+.tikz-viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tikz-title-area {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tikz-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary-glow);
+  color: var(--primary);
+}
+
+.tikz-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-bright);
+}
+
+.tikz-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-normal);
+}
+
+.tikz-toggle-btn:hover {
+  background: var(--primary-glow);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.tikz-toggle-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #000;
+}
+
+.tikz-graphic-placeholder {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.tikz-svg-schematic {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: var(--border-radius-sm);
+}
+
+.tikz-code-expanded-panel {
+  border-top: 1px solid var(--border-color);
+  background: #07090e;
+}
+
+.tikz-code-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tikz-language-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tikz-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: none;
+  font-size: 0.8rem;
+  color: var(--text-normal);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.tikz-copy-btn:hover {
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tikz-copy-btn.copied {
+  color: #10b981;
+}
+
+.tikz-code-pre {
+  margin: 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #a7b5cc;
 }
 
 

@@ -1,0 +1,55 @@
+%mac
+\immini{
+\subsubsection{Sự rơi của các vật trong không khí}
+\newghichu{Các vật rơi trong không khí xảy ra nhanh chậm khác nhau là do lực cản của không khí tác dụng vào chúng khác nhau.}
+\subsubsection{Sự rơi của các vật trong chân không (sự rơi tự do)}
+\newghichu{Sự rơi tự do là sự rơi của một vật chỉ chịu tác dụng của trọng lực}
+\subsubsection{Đặc điểm của sự rơi tự do}
+\begin{itemize}
+\item Sự rơi tự do có phương thẳng đứng (phương của dây rọi), có chiều chuyển động từ trên xuống.
+\item Sự rơi tự do là chuyển động thẳng nhanh dần đều với gia tốc \bth{a=g=const}.
+\item Tại cùng một nơi trên Trái Đất và ở gần mặt đất, các vật đều rơi tự do với cùng gia tốc g.
+\end{itemize}
+
+}
+{\begin{tikzpicture}[scale=1,thick,>=stealth']
+\node at (0,0.1){\includegraphics[width=0.45cm]{images/LongChim}};
+\node at (0.4,0){\includegraphics[width=0.45cm]{images/Bi}};
+\draw[blue,fill=white,opacity=0.3](-0.35,-1)--++(0:1)--++(90:6)coordinate(a)--++(180:1)--cycle;
+\draw[blue,fill=white,opacity=0.3](a)--++(90:0.3)--++(180:1)--++(270:0.3)--++(0:0.4)coordinate(b)--cycle;
+\draw[blue,fill=gray,opacity=0.7](b)--++(90:0.5)--++(0:0.2)--++(-90:0.5)--cycle;
+\draw(0.2,2)--++(30:1)node[above right]{Chân}node[below right]{không};
+\begin{scope}[shift={(-3,0)}]
+\node at (0.1,3){\includegraphics[width=0.45cm]{images/LongChim}};
+\node at (0.1,0){\includegraphics[width=0.45cm]{images/Bi}};
+\draw[blue,fill=white,opacity=0.3](-0.35,-1)--++(0:1)--++(90:6)coordinate(a)--++(180:1)--cycle;
+\draw[blue,fill=white,opacity=0.3](a)--++(90:0.3)--++(180:1)--++(270:0.3)--++(0:0.4)coordinate(b)--cycle;
+\draw[blue,fill=gray,opacity=0.7](b)--++(90:0.5)--++(0:0.2)--++(-90:0.5)--cycle;
+\draw(0.2,2)--++(30:1)node[above right]{Không}node[below right]{khí};
+\end{scope}
+\end{tikzpicture}}
+\begin{note}
+Nếu không đòi hỏi độ chính xác cao ta thường lấy \bth{g=9,8\ m/s^2} hoặc \bth{g=10\ m/s^2}.
+\end{note}
+\subsubsection{Các công thức của rơi tự do}
+\immini{\begin{itemize}
+\item Vận tốc: $v=gt$\\
+\item Độ dịch chuyển - Quãng đường: $d=s=\dfrac{gt^2}{2}$\\
+\item Công thức liên hệ: \ \ \ \ \ \ $v^2=2gs$
+\end{itemize}}{\begin{tikzpicture}[scale=1.1,thick,>=stealth',draw=Mapcolor]
+\tkzDefPoints{0/0/o, -0.1/-2/g, 0/-2/a, 0/-5/y, 0.2/0/s, 0.1/-2/v, -1/-5/m, 1/-5/n, -1/-5.15/q, 1/-5.15/p}
+\tkzDrawPoints[size=2](o,a,g,v)
+\fill[pattern=north east lines](m)--(n)--(p)--(q);
+\tkzDrawSegments[dashed](o,a)
+\tkzDrawSegments(m,n)
+\tkzDrawSegments[->](a,y)
+\draw[very thick,Mapcolor,->](v)--++(-90:2)node[right]{$\vec{v}$};
+\draw[very thick,Mapcolor,->](g)--++(-90:1)node[left]{$\vec{g}$};
+\tkzLabelPoint[left](o){$O$}
+\tkzLabelPoint[above left](y){}
+\begin{scope}[/pgf/decoration/raise=5pt]
+\draw [decorate,decoration={brace,mirror,amplitude=5pt},xshift=0pt,yshift=-4pt]
+(a) -- (o) node [black,midway,xshift=20pt] 
+{$s$};
+\end{scope}
+\end{tikzpicture}}
