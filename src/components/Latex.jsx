@@ -1,6 +1,7 @@
 import React from 'react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
+import { TimelineHistory, FlowchartExperimental, FlowchartModel } from './PhysicsDiagrams';
 
 // Hàm helper để render chữ thường xen kẽ inline LaTeX và bold text
 export function renderTextWithMath(text) {
@@ -126,6 +127,22 @@ export default function Latex({ content }) {
           {imgMatch[1] && <div className="theory-image-caption">{imgMatch[1]}</div>}
         </div>
       );
+      return;
+    }
+    // 2.6. Biểu đồ/Sơ đồ tương tác (Timeline & Flowcharts)
+    if (trimmed === '[TIMELINE_HISTORY_PHYSICS]') {
+      pushCurrentList();
+      renderedElements.push(<TimelineHistory key={index} />);
+      return;
+    }
+    if (trimmed === '[FLOWCHART_EXPERIMENTAL_METHOD]') {
+      pushCurrentList();
+      renderedElements.push(<FlowchartExperimental key={index} />);
+      return;
+    }
+    if (trimmed === '[FLOWCHART_MODEL_METHOD]') {
+      pushCurrentList();
+      renderedElements.push(<FlowchartModel key={index} />);
       return;
     }
 

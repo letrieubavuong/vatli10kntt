@@ -1965,6 +1965,440 @@ button, input {
   color: var(--text-bright);
 }
 
+/* --- 17. Styles cho Đồ thị Tương tác (PhysicsDiagrams) --- */
+.custom-diagram-wrapper {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.diagram-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.diagram-header svg {
+  color: var(--primary);
+  filter: drop-shadow(0 0 5px var(--primary-glow));
+}
+
+/* Xem mã Tikz */
+.tikz-code-viewer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.toggle-tikz-code-btn {
+  background: transparent;
+  border: 1px dashed var(--text-muted);
+  color: var(--text-muted);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggle-tikz-code-btn:hover {
+  border-color: var(--text-normal);
+  color: var(--text-normal);
+}
+
+.tikz-code-block {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  border-left: 3px solid var(--secondary);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  color: #38bdf8;
+  overflow-x: auto;
+  line-height: 1.4;
+}
+
+/* Phân chia thời kỳ Lịch sử */
+.timeline-periods {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.period-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+}
+
+.period-tag.p-prev, .timeline-node.p-prev .node-year {
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.period-tag.p-classic, .timeline-node.p-classic .node-year {
+  background: rgba(245, 158, 11, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.period-tag.p-modern, .timeline-node.p-modern .node-year {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+/* Tiến trình thời gian (Timeline) */
+.interactive-timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-left: 0.75rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.08);
+  gap: 1.5rem;
+}
+
+.timeline-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-node::before {
+  content: '';
+  position: absolute;
+  left: -2.05rem;
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-main);
+  border: 2px solid var(--text-muted);
+  z-index: 2;
+  transition: all var(--transition-fast);
+}
+
+.timeline-node.p-prev::before { border-color: var(--primary); }
+.timeline-node.p-classic::before { border-color: #fbbf24; }
+.timeline-node.p-modern::before { border-color: #34d399; }
+
+.timeline-node:hover::before {
+  transform: scale(1.3);
+  box-shadow: 0 0 10px currentColor;
+}
+
+.node-year {
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  align-self: flex-start;
+  line-height: 1.2;
+}
+
+.node-content {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 1rem 1.25rem;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.node-content:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: translateX(3px);
+}
+
+.node-content h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.25rem;
+}
+
+.node-content p {
+  font-size: 0.85rem;
+  color: var(--text-normal);
+  line-height: 1.4;
+}
+
+.node-period-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* Sơ đồ phương pháp thực nghiệm (Flowchart) */
+.flowchart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .flowchart-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.25rem;
+  }
+}
+
+.flowchart-step {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  padding: 1rem;
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+@media (min-width: 992px) {
+  .flowchart-step {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem 0.75rem;
+    min-height: 140px;
+  }
+}
+
+.flowchart-step:hover {
+  border-color: var(--primary);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  background: var(--primary-glow);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.step-info h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.15rem;
+}
+
+.step-info p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.flowchart-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-weight: bold;
+}
+
+.arrow-icon-desktop {
+  display: none;
+}
+
+.arrow-text-mobile {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0.25rem 0;
+}
+
+@media (min-width: 992px) {
+  .arrow-icon-desktop {
+    display: block;
+  }
+  .arrow-text-mobile {
+    display: none;
+  }
+}
+
+/* Sơ đồ phương pháp mô hình (Model Flowchart) */
+.model-flow-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.model-step {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  padding: 1rem 1.5rem;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.model-step:hover {
+  border-color: var(--secondary);
+  background: var(--bg-card-hover);
+}
+
+.model-step.success {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+.model-step.success:hover {
+  border-color: #10b981;
+}
+
+.step-circle {
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-bright);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.model-step.success .step-circle {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.model-step h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  white-space: nowrap;
+}
+
+.model-step p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: left;
+  line-height: 1.3;
+}
+
+.flow-arrow-down {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+.model-branches {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+
+.branch-pass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 250px;
+}
+
+.branch-fail {
+  flex: 1;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.branch-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2/rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.branch-label.success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.branch-label.danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.loop-back-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: #f87171;
+  padding: 1rem;
+  border: 1px dashed rgba(239, 68, 68, 0.3);
+  border-radius: var(--border-radius-sm);
+  width: 100%;
+  text-align: center;
+}
+
+.loop-back-indicator span {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+
 
 
 

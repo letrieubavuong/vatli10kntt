@@ -7,17 +7,51 @@ export const physicsData = [
         id: "bai-1",
         title: "Bài 1: Khái quát về môn Vật lí",
         theory: `### I. Đối tượng nghiên cứu của Vật lí
-Vật lí là môn khoa học nghiên cứu về các dạng vận động của **vật chất** (chất, trường) và **năng lượng**. 
-Các lĩnh vực nghiên cứu của Vật lí rất đa dạng, từ thế giới vi mô (hạt nhân, nguyên tử) đến thế giới vĩ mô (các thiên thể, vũ trụ).
+Thuật ngữ "vật lí" có nguồn gốc từ tiếng Hy Lạp "physiko" có nghĩa là "kiến thức về tự nhiên". Vật lí là môn khoa học tự nhiên có đối tượng nghiên cứu tập trung vào các dạng vận động của **vật chất** (chất, trường) và **năng lượng**.
 
-### II. Phương pháp nghiên cứu Vật lí
-Phương pháp nghiên cứu Vật lí gồm hai phương pháp chính tương hỗ lẫn nhau:
-1. **Phương pháp thực nghiệm**: Dùng thí nghiệm để phát hiện quy luật hoặc kiểm chứng lý thuyết.
-2. **Phương pháp mô hình**: Xây dựng mô hình (toán học, vật lí, giả thuyết) để giải thích và dự đoán hiện tượng.
-Sơ đồ của phương pháp thực nghiệm:
-$$\\text{Xác định vấn đề} \\rightarrow \\text{Quan sát/Giả thuyết} \\rightarrow \\text{Thí nghiệm kiểm chứng} \\rightarrow \\text{Phân tích kết quả} \\rightarrow \\text{Kết luận}$$
+Các lĩnh vực nghiên cứu của Vật lí rất đa dạng, từ Cơ học, Điện học, Điện từ học, Quang học, Âm học, Nhiệt học, Nhiệt động lực học đến Vật lí nguyên tử và hạt nhân, Vật lí lượng tử, Thuyết tương đối.
 
-### III. Phép đo các đại lượng vật lí và Sai số
+### II. Quá trình phát triển của Vật lí
+Quá trình phát triển của vật lí được chia thành 3 giai đoạn chính:
+1. Quan sát (tiền Vật lí)
+2. Thực nghiệm (Vật lí cổ điển)
+3. Mô hình (Vật lí hiện đại)
+
+[TIMELINE_HISTORY_PHYSICS]
+
+### III. Vai trò của Vật lí đối với Khoa học, Kĩ thuật và Công nghệ
+- **a) Đối với Khoa học**: Vật lí có quan hệ với mọi ngành khoa học và thường được coi là cơ sở của khoa học tự nhiên (KHTN).
+- **b) Đối với Kĩ thuật và Công nghệ**: Vật lí là cơ sở của công nghệ. Có thể khẳng định là không có các thành tựu nghiên cứu của Vật lí thì không có công nghệ.
+  - Máy hơi nước do James Watt (Giêm Oát) sáng chế năm 1765 dựa trên những kết quả nghiên cứu về Nhiệt của Vật lí đã tạo nên bước khởi đầu cho cuộc cách mạng công nghiệp lần thứ nhất.
+  - Khám phá ra hiện tượng cảm ứng điện từ của Faraday là một trong những cơ sở cho sự ra đời của cuộc cách mạng công nghiệp lần thứ hai (thế kỉ XIX) với các thiết bị dùng điện.
+  - Cuộc cách mạng công nghiệp lần thứ ba (những năm 70 của thế kỉ XX) với đặc trưng tự động hóa các quá trình sản xuất nhờ có những thành tựu nghiên cứu về điện tử, chất bán dẫn và vi mạch.
+  - Cuộc cách mạng công nghiệp lần thứ tư (đầu thế kỉ XXI) sử dụng trí tuệ nhân tạo (AI), robot, internet toàn cầu, công nghệ nano...
+- **c) Đối với đời sống và môi trường**: Việc ứng dụng các thành tựu của vật lí không chỉ mang lại lợi ích cho nhân loại mà còn có thể làm ô nhiễm môi trường, huỷ hoại hệ sinh thái,... nếu không được sử dụng đúng cách và đúng mục đích.
+
+### IV. Phương pháp nghiên cứu Vật lí
+#### 1. Phương pháp lí thuyết
+Sử dụng ngôn ngữ toán học và suy luận lí thuyết để phát hiện một kết quả mới.
+#### 2. Phương pháp thực nghiệm
+Các bước trong phương pháp thực nghiệm:
+1. Xác định vấn đề cần nghiên cứu
+2. Quan sát, thu thập thông tin
+3. Đưa ra dự đoán
+4. Làm thí nghiệm để kiểm chứng dự đoán
+5. Kết luận
+
+[FLOWCHART_EXPERIMENTAL_METHOD]
+
+#### 3. Phương pháp mô hình
+Các loại mô hình vật lí phổ biến:
+- **Mô hình vật chất**: Quả địa cầu trong phòng thí nghiệm (mô hình thu nhỏ của Trái Đất), mô hình động cơ, mô hình nguyên tử...
+- **Mô hình lí thuyết**: Mô hình "chất điểm" khi nghiên cứu chuyển động đường dài của ô tô, mô hình "tia sáng" biểu diễn đường truyền ánh sáng.
+- **Mô hình toán học**: Các công thức, phương trình, đồ thị (ví dụ: vectơ dùng để mô tả một đại lượng có hướng như lực, độ dịch chuyển).
+
+Sơ đồ quy trình phương pháp mô hình:
+
+[FLOWCHART_MODEL_METHOD]
+
+### V. Phép đo các đại lượng vật lí và Sai số
 Khi đo một đại lượng vật lí $A$, ta nhận được giá trị trung bình $\\bar{A}$ và sai số tuyệt đối $\\Delta A$. Kết quả phép đo được biểu diễn dưới dạng:
 $$A = \\bar{A} \\pm \\Delta A$$
 - **Sai số tuyệt đối trung bình**:
