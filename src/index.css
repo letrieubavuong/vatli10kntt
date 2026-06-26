@@ -1665,4 +1665,306 @@ button, input {
   }
 }
 
+/* --- 15. Styles cho hình ảnh trong bài giảng --- */
+.theory-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.theory-image {
+  max-width: 100%;
+  max-height: 480px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
+  object-fit: contain;
+  transition: transform var(--transition-normal);
+}
+
+.theory-image:hover {
+  transform: scale(1.015);
+}
+
+  .theory-image-caption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+}
+
+/* --- 16. CSS cho Cổng Chào Mừng (Portal Welcome Screen) --- */
+.portal-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--bg-main);
+  padding: 1.5rem;
+}
+
+.portal-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.portal-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 600px;
+}
+
+.portal-logo {
+  color: var(--primary);
+  filter: drop-shadow(0 0 10px var(--primary-glow));
+  margin-bottom: 0.5rem;
+}
+
+.portal-header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-bright);
+  letter-spacing: -1px;
+}
+
+.portal-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.portal-roles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .portal-roles-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.portal-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.portal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  transition: background var(--transition-normal);
+}
+
+.portal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.portal-card.active {
+  border-color: var(--border-focus);
+}
+
+.portal-card:hover::before {
+  background: var(--accent-gradient);
+}
+
+.portal-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.role-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.role-icon-wrapper.student {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--primary);
+}
+
+.role-icon-wrapper.teacher {
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--secondary);
+}
+
+.portal-card h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-bright);
+}
+
+.portal-card p {
+  font-size: 0.95rem;
+  color: var(--text-normal);
+  line-height: 1.5;
+}
+
+.portal-action-btn {
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  width: 100%;
+}
+
+.portal-action-btn.student {
+  background: var(--primary-glow);
+  color: var(--primary);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.portal-action-btn.student:hover {
+  background: var(--primary);
+  color: var(--bg-main);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.portal-action-btn.teacher {
+  background: var(--secondary-glow);
+  color: var(--secondary);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.portal-action-btn.teacher:hover {
+  background: var(--secondary);
+  color: var(--text-bright);
+  box-shadow: 0 0 20px var(--secondary-glow);
+}
+
+/* Giao diện Form trong Card */
+.portal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.portal-form h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.portal-form-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.btn-cancel {
+  flex: 1;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-normal);
+  padding: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-bright);
+}
+
+.btn-submit {
+  flex: 1.5;
+  border: none;
+  color: var(--text-bright);
+  padding: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-submit.student {
+  background: var(--accent-gradient);
+  box-shadow: 0 4px 15px -3px var(--secondary-glow);
+}
+.btn-submit.student:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px -3px var(--secondary-glow);
+}
+
+.btn-submit.teacher {
+  background: var(--accent-gradient);
+  box-shadow: 0 4px 15px -3px var(--secondary-glow);
+}
+.btn-submit.teacher:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px -3px var(--secondary-glow);
+}
+
+.exit-role-btn {
+  background: transparent;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #f87171;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.45rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.exit-role-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+  color: var(--text-bright);
+}
+
+
+
 

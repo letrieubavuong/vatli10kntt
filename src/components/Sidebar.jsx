@@ -7,7 +7,8 @@ export default function Sidebar({
   onSelectLesson,
   isOpen,
   onToggle,
-  onSelectAdminView
+  onSelectAdminView,
+  onExitRole
 }) {
   // Trạng thái mở rộng/thu gọn của từng chương (mặc định mở chương 1)
   const [expandedChapters, setExpandedChapters] = useState({
@@ -92,10 +93,17 @@ export default function Sidebar({
           <button 
             className="admin-link-btn" 
             onClick={onSelectAdminView}
+            style={{ marginBottom: '0.4rem' }}
           >
             Dành cho Giáo viên
           </button>
-          <p style={{ marginTop: '0.4rem' }}>© 2026 Bài giảng Vật Lí 10</p>
+          <button 
+            className="exit-role-btn" 
+            onClick={onExitRole}
+          >
+            Thoát / Đổi vai trò
+          </button>
+          <p style={{ marginTop: '0.5rem' }}>© 2026 Bài giảng Vật Lí 10</p>
         </div>
       </aside>
     </>

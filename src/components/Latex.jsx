@@ -116,6 +116,19 @@ export default function Latex({ content }) {
       return;
     }
 
+    // 2.5. Hình ảnh Markdown (![Mô tả](đường_dẫn))
+    const imgMatch = trimmed.match(/^!\[(.*?)\]\((.*?)\)$/);
+    if (imgMatch) {
+      pushCurrentList();
+      renderedElements.push(
+        <div key={index} className="theory-image-wrapper">
+          <img src={imgMatch[2]} alt={imgMatch[1]} className="theory-image" />
+          {imgMatch[1] && <div className="theory-image-caption">{imgMatch[1]}</div>}
+        </div>
+      );
+      return;
+    }
+
     // 3. Tiêu đề (### hoặc ## hoặc #)
     if (trimmed.startsWith('### ')) {
       pushCurrentList();
